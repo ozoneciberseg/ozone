@@ -1,316 +1,122 @@
-
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Portafolio Profesional</title>
-  <link rel="stylesheet" href="estilo.css">
+<head> 
+    <meta charset="UTF-8"> 
+    <title>Portafolio Profesional</title> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        /* Ajustes para que el carrusel se vea impecable */
+        .cert-swiper {
+            width: 100%;
+            padding: 20px 0 50px 0;
+        }
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .swiper-button-next, .swiper-button-prev {
+            color: #007bff;
+        }
+        .swiper-pagination-bullet-active {
+            background: #007bff;
+        }
+        /* Asegura que las imágenes no se estiren */
+        .item img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
 </head>
-<body>
-  <div class="contenedor">
-    <h1>Portafolio</h1>
-    <p>Bienvenido a mi sitio personal donde puedes revisar certificaciones y algunos trabajos realizados.</p>
+<body> 
+    <div class="contenedor"> 
+        <h1>Portafolio</h1> 
+        <p>Bienvenido a mi sitio personal donde puedes revisar certificaciones y algunos trabajos realizados.</p>
+ 
+        <h2>Certificaciones y Cursos</h2> 
+        
+        <div class="swiper cert-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="item"> <a href="pdfs/AWS Academy Cloud Foundations.pdf" target="_blank"> <img src="imagenes/AWS Academy Cloud Foundations.png" alt="AWS"> <p>AWS Academy Cloud Foundations</p> </a> </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="item"> <a href="pdfs/CISCO CCNA 1.pdf" target="_blank"> <img src="imagenes/CISCO CCNA 1.png" alt="CISCO CCNA 1"> <p>CISCO CCNA 1</p> </a> </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="item"> <a href="pdfs/CISCO Endpoint Security.pdf" target="_blank"> <img src="imagenes/CISCO Endpoint Security.png" alt="CISCO Endpoint Security"> <p>CISCO Endpoint Security</p> </a> </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="item"> <a href="pdfs/CISCO Introduccion to cibersecurity.pdf" target="_blank"> <img src="imagenes/CISCO Introduccion to cibersecurity.png" alt="CISCO Introduccion to cibersecurity"> <p>CISCO Introduccion to cibersecurity</p> </a> </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="item"> <a href="pdfs/CISCO junior cybersecurity analyst.pdf" target="_blank"> <img src="imagenes/CISCO junior cybersecurity analyst.png" alt="CISCO junior cybersecurity analyst"> <p>CISCO junior cybersecurity analyst</p> </a> </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="item"> <a href="pdfs/CISCO networking basics.pdf" target="_blank"> <img src="imagenes/CISCO networking basics.png" alt="CISCO networking basics"> <p>CISCO networking basics</p> </a> </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="item"> <a href="pdfs/CISCO Networking Devices and Basic Config.pdf" target="_blank"> <img src="imagenes/CISCO Networking Devices and Basic Config.png" alt="CISCO Networking Devices and Basic Config"> <p>CISCO Networking Devices and Basic Config</p> </a> </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="item"> <a href="pdfs/CISCO NETWORKING PRO AULACERTI.pdf" target="_blank"> <img src="imagenes/CISCO NETWORKING PRO AULACERTI.png" alt="CISCO NETWORKING PRO AULACERTI"> <p>CISCO NETWORKING PRO AULACERTI</p> </a> </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="item"> <a href="pdfs/CISCO Seguridad perimetral.pdf" target="_blank"> <img src="imagenes/CISCO Seguridad perimetral.png" alt="CISCO Seguridad perimetral"> <p>CISCO Seguridad perimetral</p> </a> </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="item"> <a href="pdfs/Curso Analista CyberSOC nivel 1 RESILITY ACADEMY.pdf" target="_blank"> <img src="imagenes/Curso Analista CyberSOC nivel 1 RESILITY ACADEMY.png" alt="SOC"> <p>Curso Analista CyberSOC nivel 1</p> </a> </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="item"> <a href="pdfs/RedHat Training with Linux Fundamentals.pdf" target="_blank"> <img src="imagenes/RedHat Training with Linux Fundamentals.png" alt="RedHat"> <p>RedHat Linux Fundamentals</p> </a> </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="item"> <a href="pdfs/TCM Linux 100 Fundamentals.pdf" target="_blank"> <img src="imagenes/TCM Linux 100 Fundamentals.png" alt="TCM"> <p>TCM Linux 100 Fundamentals</p> </a> </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <h2>Proyecto LABS 2026</h2> 
+        <div class="galeria"> 
+            <div class="item"> <a href="pdfs/documentacion/Proyecto 1 Instalacion y preparación de Ubuntu Server.pdf" target="_blank"> <img src="imagenes/documentacion/Portada 1.jpg" alt="LAB1-2026"> <p>LAB1 - Analisis tactico de logs en sistemas Linux.</p> </a> </div>  
+            <div class="item"> <a href="pdfs/documentacion/Proyecto 2 Analisis de logs en Linux.pdf" target="_blank"> <img src="imagenes/documentacion/Portada 2.jpg" alt="LAB2-2026"> <p>LAB2 - Analisis tactico de logs en sistemas Linux.</p> </a> </div>
+            <div class="item"> <a href="pdfs/documentacion/Proyecto 3 Hardening basico de Linux.pdf" target="_blank"> <img src="imagenes/documentacion/Portada 3.jpg" alt="LAB3-2026"> <p>LAB3 - Hardening Básico de Linux.</p> </a> </div>
+            <div class="item"> <a href="pdfs/documentacion/Proyecto 4 Hardening UFW + Fail2Ban + CrowdSec.pdf" target="_blank"> <img src="imagenes/documentacion/Portada 4.jpg" alt="LAB4-2026"> <p>LAB4 - Hardening Avanzado de Linux.</p> </a> </div>
+            <div class="item"> <a href="pdfs/documentacion/Proyecto 5 Instalacion de Kali Linux.pdf" target="_blank"> <img src="imagenes/documentacion/Portada 5.jpg" alt="LAB5-2026"> <p>LAB5 - Instalación de Kali Linux.</p> </a> </div>
+            <div class="item"> <a href="pdfs/documentacion/Proyecto 6 Instalación de Metasploitable2.pdf" target="_blank"> <img src="imagenes/documentacion/Portada 6.jpg" alt="LAB5-2026"> <p>LAB6 - Instalación de Metasploitable 2.</p> </a> </div>
+            <div class="item"> <a href="pdfs/documentacion/Proyecto 7 Escaneo de red con Nmap.pdf" target="_blank"> <img src="imagenes/documentacion/Portada 7.jpg" alt="LAB5-2026"> <p>LAB7 - Escaneo de redes con Nmap.</p> </a> </div>
+        </div> 
 
-  
-
-    <h2>Certificaciones y Cursos</h2>
-    <div class="galeria">
-      <div class="item">
-        <a href="pdfs/AWS Academy Cloud Foundations.pdf" target="_blank">
-          <img src="imagenes/AWS Academy Cloud Foundations.png" alt="AWS">
-          <p>AWS Academy Cloud Foundations</p>
-        </a>
-      </div>
-      
-      <div class="item">
-        <a href="pdfs/CISCO CCNA 1.pdf" target="_blank">
-          <img src="imagenes/CISCO CCNA 1.png" alt="CISCO CCNA 1">
-          <p>CISCO CCNA 1</p>
-        </a>
-      </div>
-      
-       <div class="item">
-        <a href="pdfs/CISCO Endpoint Security.pdf" target="_blank">
-          <img src="imagenes/CISCO Endpoint Security.png" alt="CISCO Endpoint Security">
-          <p>CISCO Endpoint Security</p>
-        </a>
-      </div>
-      
-       <div class="item">
-        <a href="pdfs/CISCO Introduccion to cibersecurity.pdf" target="_blank">
-          <img src="imagenes/CISCO Introduccion to cibersecurity.png" alt="CISCO Introduccion to cibersecurity">
-          <p>CISCO Introduccion to cibersecurity</p>
-        </a>
-      </div>
-      
-       <div class="item">
-        <a href="pdfs/CISCO junior cybersecurity analyst.pdf" target="_blank">
-          <img src="imagenes/CISCO junior cybersecurity analyst.png" alt="CISCO junior cybersecurity analyst">
-          <p>CISCO junior cybersecurity analyst</p>
-        </a>
-      </div>
-      
-       <div class="item">
-        <a href="pdfs/CISCO networking basics.pdf" target="_blank">
-          <img src="imagenes/CISCO networking basics.png" alt="CISCO networking basics">
-          <p>CISCO networking basics</p>
-        </a>
-      </div>
-      
-       <div class="item">
-        <a href="pdfs/CISCO Networking Devices and Basic Config.pdf" target="_blank">
-          <img src="imagenes/CISCO Networking Devices and Basic Config.png" alt="CISCO Networking Devices and Basic Config">
-          <p>CISCO Networking Devices and Basic Config</p>
-        </a>
-      </div>
-      
-       <div class="item">
-        <a href="pdfs/CISCO NETWORKING PRO AULACERTI.pdf" target="_blank">
-          <img src="imagenes/CISCO NETWORKING PRO AULACERTI.png" alt="CISCO NETWORKING PRO AULACERTI">
-          <p>CISCO NETWORKING PRO AULACERTI</p>
-        </a>
-      </div>
-      
-       <div class="item">
-        <a href="pdfs/CISCO Seguridad perimetral.pdf" target="_blank">
-          <img src="imagenes/CISCO Seguridad perimetral.png" alt="CISCO Seguridad perimetral">
-          <p>CISCO Seguridad perimetral</p>
-        </a>
-      </div>
-      
-       <div class="item">
-        <a href="pdfs/Curso Analista CyberSOC nivel 1 RESILITY ACADEMY.pdf" target="_blank">
-          <img src="imagenes/Curso Analista CyberSOC nivel 1 RESILITY ACADEMY.png" alt="Curso Analista CyberSOC nivel 1 RESILITY ACADEMY">
-          <p>Curso Analista CyberSOC nivel 1 RESILITY ACADEMY</p>
-        </a>
-      </div>
-      
-       <div class="item">
-        <a href="pdfs/Fundamentos del rol del oficial de ciberseguridad ciso 8dot8 Academy.pdf" target="_blank">
-          <img src="imagenes/Fundamentos del rol del oficial de ciberseguridad ciso 8dot8 Academy.png" alt="Fundamentos del rol del oficial de ciberseguridad ciso 8dot8 Academy">
-          <p>Fundamentos del rol del oficial de ciberseguridad ciso 8dot8 Academy</p>
-        </a>
-      </div>
-      
-       <div class="item">
-        <a href="pdfs/RedHat Training with Linux Fundamentals.pdf" target="_blank">
-          <img src="imagenes/RedHat Training with Linux Fundamentals.png" alt="RedHat Training with Linux Fundamentals">
-          <p>RedHat Training with Linux Fundamentals</p>
-        </a>
-      </div>
-
-       <div class="item">
-        <a href="pdfs/SENCE MOVISTAR - Diseño Web con HTML5 + CSS.pdf" target="_blank">
-          <img src="imagenes/SENCE MOVISTAR.png" alt="SENCE MOVISTAR - Diseño Web con HTML5 + CSS">
-          <p>SENCE MOVISTAR - Diseño Web con HTML5 + CSS</p>
-        </a>
-      </div>
-
-      <div class="item">
-        <a href="pdfs/SENCE MOVISTAR - Excel avanzado.pdf" target="_blank">
-          <img src="imagenes/SENCE MOVISTAR.png" alt="SENCE MOVISTAR - Excel avanzado">
-          <p>SENCE MOVISTAR - Excel avanzado</p>
-        </a>
-      </div>
-
-      <div class="item">
-        <a href="pdfs/SENCE MOVISTAR - Introduccion a la programacion.pdf" target="_blank">
-          <img src="imagenes/SENCE MOVISTAR.png" alt="SENCE MOVISTAR - Introduccion a la programacionS">
-          <p>SENCE MOVISTAR - Introduccion a la programacion</p>
-        </a>
-      </div>
-
-      <div class="item">
-        <a href="pdfs/SENCE MOVISTAR - Introduccion a la seguridad de la informacion.pdf" target="_blank">
-          <img src="imagenes/SENCE MOVISTAR.png" alt="SENCE MOVISTAR - Introduccion a la seguridad de la informacion">
-          <p>SENCE MOVISTAR - Introduccion a la seguridad de la informacion</p>
-        </a>
-      </div>
-
-      <div class="item">
-        <a href="pdfs/SENCE MOVISTAR - Office basico.pdf" target="_blank">
-          <img src="imagenes/SENCE MOVISTAR.png" alt="SENCE MOVISTAR - Office basico">
-          <p>SENCE MOVISTAR - Office basico</p>
-        </a>
-      </div>
-
-      <div class="item">
-        <a href="pdfs/SENCE MOVISTAR - Programacion con Javascript.pdf" target="_blank">
-          <img src="imagenes/SENCE MOVISTAR.png" alt="SENCE MOVISTAR - Programacion con Javascript">
-          <p>SENCE MOVISTAR - Programacion con Javascript</p>
-        </a>
-      </div>
-  
-      <div class="item">
-        <a href="pdfs/TCM Linux 100 Fundamentals.pdf" target="_blank">
-          <img src="imagenes/TCM Linux 100 Fundamentals.png" alt="TCM Linux 100 Fundamentals">
-          <p>TCM Linux 100 Fundamentals</p>
-        </a>
-      </div>
-
-      <div class="item">
-        <a href="pdfs/TCM Programming 100 fundamentals.pdf" target="_blank">
-          <img src="imagenes/TCM Programming 100 fundamentals.png" alt="TCM Programming 100 fundamentals">
-          <p>TCM Programming 100 fundamentals</p>
-        </a>
-      </div>
-      
+        <h2>Documentación de TEMAS VARIADOS</h2> 
+        <div class="galeria">  
+            <div class="item"> <a href="pdfs/Cibercasos - Kaseya Ransomware - 2021.pdf" target="_blank"> <img src="imagenes/Cibercasos - Kaseya Ransomware - 2021.jpg" alt="Kasseya"> <p>Cibercasos - "Kaseya Ransomware" - 2021.</p> </a> </div>
+            <div class="item"> <a href="pdfs/documentacion/Cibercasos - UCLA - CVE-2023-34362.pdf" target="_blank"> <img src="imagenes/documentacion/Cibercasos - UCLA - CVE-2023-34362.jpg" alt="UCLA"> <p>Cibercasos - "UCLA" - 2023.</p> </a> </div>  
+            <div class="item"> <a href="pdfs/documentacion/Instalacion de DOCKER en Kali Linux.pdf" target="_blank"> <img src="imagenes/documentacion/Sistemas Operativos - Instalacion de DOCKER en Kali Linux.jpg" alt="Docker"> <p>Tools - Instalacion de DOCKER en Kali Linux.</p> </a> </div>  
+            <div class="item"> <a href="pdfs/documentacion/001 Topologias de red y ciberseguridad.pdf" target="_blank"> <img src="imagenes/documentacion/Topologias de red.jpg" alt="Red"> <p>Network - Topologías de red y ciberseguridad.</p> </a> </div>
+            <div class="item"> <a href="pdfs/documentacion/SQUID SURICATA WAZUH, Instalacion, configuracion y primeros pasos.pdf" target="_blank"> <img src="imagenes/documentacion/SQUID SURICATA WAZUH, Instalacion, configuracion y primeros pasos.jpg" alt="Wazuh"> <p>Tools - SQUID+SURICATA+WAZUH.</p> </a> </div>
+            <div class="item"> <a href="pdfs/documentacion/Informe de auditoria de ciberseguridad.pdf" target="_blank"> <img src="imagenes/documentacion/Informe de auditoria de ciberseguridad.jpg" alt="Auditoria"> <p>Compliance - Informe de Auditoría.</p> </a> </div>  
+        </div> 
     </div>
 
-    <h2>Proyecto LABS 2026</h2>
-    <div class="galeria">
-      <div class="item">
-        <a href="pdfs/documentacion/Proyecto 1 Instalacion y preparación de Ubuntu Server.pdf" target="_blank">
-          <img src="imagenes/documentacion/Portada 1.jpg" alt="LAB1-2026">
-          <p>LAB1 - Analisis tactico de logs en sistemas Linux.</p>
-        </a>
-      </div>
-      
-      <div class="item">
-        <a href="pdfs/documentacion/Proyecto 2 Analisis de logs en Linux.pdf" target="_blank">
-          <img src="imagenes/documentacion/Portada 2.jpg" alt="LAB2-2026">
-          <p>LAB2 - Analisis tactico de logs en sistemas Linux.</p>
-        </a>
-      </div>
-
-      <div class="item">
-        <a href="pdfs/documentacion/Proyecto 3 Hardening basico de Linux.pdf" target="_blank">
-          <img src="imagenes/documentacion/Portada 3.jpg" alt="LAB3-2026">
-          <p>LAB3 - Hardening Básico de Linux.</p>
-        </a>
-      </div>
-
-      <div class="item">
-        <a href="pdfs/documentacion/Proyecto 4 Hardening UFW + Fail2Ban + CrowdSec.pdf" target="_blank">
-          <img src="imagenes/documentacion/Portada 4.jpg" alt="LAB4-2026">
-          <p>LAB4 - Hardening Avanzado de Linux.</p>
-        </a>
-      </div>
-
-      <div class="item">
-        <a href="pdfs/documentacion/Proyecto 5 Instalacion de Kali Linux.pdf" target="_blank">
-          <img src="imagenes/documentacion/Portada 5.jpg" alt="LAB5-2026">
-          <p>LAB5 - Instalación de Kali Linux.</p>
-        </a>
-      </div>
-
-      <div class="item">
-        <a href="pdfs/documentacion/Proyecto 6 Instalación de Metasploitable2.pdf" target="_blank">
-          <img src="imagenes/documentacion/Portada 6.jpg" alt="LAB5-2026">
-          <p>LAB6 - Instalación de Metasploitable 2.</p>
-        </a>
-      </div>
-
-      <div class="item">
-        <a href="pdfs/documentacion/Proyecto 7 Escaneo de red con Nmap.pdf" target="_blank">
-          <img src="imagenes/documentacion/Portada 7.jpg" alt="LAB5-2026">
-          <p>LAB7 - Escaneo de redes con Nmap.</p>
-        </a>
-      </div>
-
-    </div>
-    <h2>Documentación de TEMAS VARIADOS DE CIBERSEGURIDAD</h2>
-    <div class="galeria">
-      
-      <div class="item">
-        <a href="pdfs/Cibercasos - Kaseya Ransomware - 2021.pdf" target="_blank">
-          <img src="imagenes/Cibercasos - Kaseya Ransomware - 2021.jpg" alt="Kasseya Ransomware">
-          <p>Cibercasos - "Kaseya Ransomware" - 2021.</p>
-        </a>
-      </div>
-
-      <div class="item">
-        <a href="pdfs/documentacion/Cibercasos - UCLA - CVE-2023-34362.pdf" target="_blank">
-          <img src="imagenes/documentacion/Cibercasos - UCLA - CVE-2023-34362.jpg" alt="UCLA 2023">
-          <p>Cibercasos - "UCLA" - 2023.</p>
-        </a>
-      </div>
-          
-      <div class="item">
-        <a href="pdfs/documentacion/Instalacion de DOCKER en Kali Linux.pdf" target="_blank">
-          <img src="imagenes/documentacion/Sistemas Operativos - Instalacion de DOCKER en Kali Linux.jpg" alt="Instalación Docker">
-          <p>Tools - Instalacion de DOCKER en Kali Linux.</p>
-        </a>
-      </div>
-    
-      <div class="item">
-        <a href="pdfs/documentacion/001 Topologias de red y ciberseguridad.pdf" target="_blank">
-          <img src="imagenes/documentacion/Topologias de red.jpg" alt="Topologias de red">
-          <p>Network - Topologías de red y ciberseguridad.</p>
-        </a>
-      </div>
-
-      <div class="item">
-        <a href="pdfs/documentacion/002 Modelos OSI y TCP importancia en ciberseguridad porque debes conocerlos y aplicarlos.pdf" target="_blank">
-          <img src="imagenes/documentacion/002 Modelos OSI y TCP importancia en ciberseguridad porque debes conocerlos y aplicarlos.jpg" alt="Modelos OSI y TCP">
-          <p>Network - Modelos OSI y TCP Importancia en Ciberseguridad.</p>
-        </a>
-      </div>
-
-      <div class="item">
-        <a href="pdfs/documentacion/003 VLSM y ciberseguridad.pdf" target="_blank">
-          <img src="imagenes/documentacion/003 VLSM y ciberseguridad.jpg" alt="VLSM y Ciberseguridad">
-          <p>Network - VLSM y Ciberseguridad.</p>
-        </a>
-      </div>
-
-      <div class="item">
-        <a href="pdfs/documentacion/004 Configuracion basica de red en packet tracer.pdf" target="_blank">
-          <img src="imagenes/documentacion/004 Configuracion basica de red en packet tracer.jpg" alt="Redes">
-          <p>Network - Configuración básica de red en Packet Tracer.</p>
-        </a>
-      </div>
-
-      <div class="item">
-        <a href="pdfs/documentacion/005 Configuracion basica de red en packet tracer 2.pdf" target="_blank">
-          <img src="imagenes/documentacion/005 Configuracion basica de red en packet tracer 2.jpg" alt="Redes">
-          <p>Network - Configuración básica de red en Packet Tracer 2.</p>
-        </a>
-      </div>
-           
-      <div class="item">
-        <a href="pdfs/documentacion/hardening en servidores linux bitacora de batalla.pdf" target="_blank">
-          <img src="imagenes/documentacion/hardening en servidores linux bitacora de batalla.jpg" alt="Hardening Servidores Linux">
-          <p>SO - Hardening Servidores Linux Bitacora de Batalla.</p>
-        </a>
-      </div>
-
-      <div class="item">
-        <a href="pdfs/documentacion/hardening en servidores linux WireGuard y GeoIP.pdf" target="_blank">
-          <img src="imagenes/documentacion/hardening en servidores linux WireGuard y GeoIP.jpg" alt="Hardening Servidores Linux">
-          <p>SO - Hardening Servidores Linux WireGuard y GeoIP.</p>
-        </a>
-      </div>
-
-      <div class="item">
-        <a href="pdfs/documentacion/SQUID SURICATA WAZUH, Instalacion, configuracion y primeros pasos.pdf" target="_blank">
-          <img src="imagenes/documentacion/SQUID SURICATA WAZUH, Instalacion, configuracion y primeros pasos.jpg" alt="Wazuh Squid Suricata">
-          <p>Tools - SQUID+SURICATA+WAZUH, Instalacion, configuracion y primeros pasos.</p>
-        </a>
-      </div>
-
-      <div class="item">
-        <a href="pdfs/documentacion/AUDITORIA DE CIBERSEGURIDAD conceptos clave.pdf" target="_blank">
-          <img src="imagenes/documentacion/AUDITORIA DE CIBERSEGURIDAD conceptos e implementacion.jpg" alt="Auditoria">
-          <p>Compliance - Auditoria de Ciberseguridad conceptos clave.</p>
-        </a>
-      </div>
-
-      <div class="item">
-        <a href="pdfs/documentacion/evaluacion tecnica de ciberseguridad y compliance.jpg.pdf" target="_blank">
-          <img src="imagenes/documentacion/evaluacion tecnica de ciberseguridad y compliance.jpg" alt="Evaluacion de ciberseguridad">
-          <p>Compliance - Evaluación técnica de Ciberseguridad - Lab.</p>
-        </a>
-      </div>
-      
-      <div class="item">
-        <a href="pdfs/documentacion/Informe de auditoria de ciberseguridad.pdf" target="_blank">
-          <img src="imagenes/documentacion/Informe de auditoria de ciberseguridad.jpg" alt="Informe de Auditoria">
-          <p>Compliance - Informe de Auditoría de Ciberseguridad.</p>
-        </a>
-      </div>
-      
-    </div>
-  </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".cert-swiper", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: { delay: 3000, disableOnInteraction: false },
+        pagination: { el: ".swiper-pagination", clickable: true },
+        navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+        breakpoints: {
+          640: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        },
+      });
+    </script>
 </body>
 </html>
