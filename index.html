@@ -6,28 +6,72 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="estilo.css">
     <style>
+        /* ============================================================
+           ESTILOS ESPECÍFICOS PARA EL EFECTO 3D (COVERFLOW)
+           ============================================================ */
         
         .cert-swiper {
             width: 100%;
-            padding: 20px 0 50px 0;
+            /* Añadimos padding vertical para dar espacio al efecto 3D y la paginación */
+            padding-top: 50px;
+            padding-bottom: 80px;
+            /* Necesario para que el efecto 3D no se corte */
+            perspective: 1200px; 
         }
+
         .swiper-slide {
+            /* Ajustamos el ancho de cada slide para el efecto 3D */
+            width: 300px; 
+            height: auto;
+            /* Centramos el contenido */
             display: flex;
             justify-content: center;
             align-items: center;
+            /* Suavizamos la transición de los efectos */
+            transition: transform 0.3s ease, opacity 0.3s ease;
         }
+
+        /* Estilos para el ítem individual dentro del slide */
+        .item {
+            width: 100%;
+            background: #fff;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            text-align: center;
+            /* Evitamos que el texto se desborde */
+            overflow: hidden; 
+        }
+
+        .item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .item p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #333;
+            /* Limitamos el texto a dos líneas para uniformidad */
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Personalización de los controles (opcional, cámbialos a tu gusto) */
         .swiper-button-next, .swiper-button-prev {
             color: #007bff;
+            /* Los subimos un poco para que no tapen el efecto inferior */
+            top: 50%; 
+            transform: translateY(-50%);
         }
+
         .swiper-pagination-bullet-active {
             background: #007bff;
-        }
-        
-        .item img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
         }
     </style>
 </head>
@@ -81,6 +125,7 @@
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
         </div>
+        
         <h2>Proyecto LABS 2026</h2> 
         <div class="galeria"> 
             <div class="item"> <a href="pdfs/documentacion/Proyecto 1 Instalacion y preparación de Ubuntu Server.pdf" target="_blank"> <img src="imagenes/documentacion/Portada 1.jpg" alt="LAB1-2026"> <p>LAB1 - Analisis tactico de logs en sistemas Linux.</p> </a> </div>  
