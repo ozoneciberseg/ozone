@@ -1837,3 +1837,15 @@ body {
 		max-width: 250px;
 	}
 }
+/* Cuando el navegador da el OK, mostramos el cuerpo */
+body.cargado-total {
+    opacity: 1 !important;
+}
+
+/* Forzamos a la grilla a estar bien puesta al cargar */
+body.cargado-total .menu-item {
+    opacity: 1 !important;
+    transform: translateY(0) scale(1) !important;
+    visibility: visible !important;
+    animation: none !important; /* Matamos la animación que se queda a medias */
+}
