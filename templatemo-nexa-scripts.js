@@ -23,7 +23,7 @@ window.addEventListener('load', () => {
             item.classList.add('visible'); // Asegura que la clase de CSS se aplique
          }, index * 100); // Aparecen uno tras otro suavemente
       });
-   }, 500); 
+   }, 2000); 
 });
 
 // Menu Item Click Handler
