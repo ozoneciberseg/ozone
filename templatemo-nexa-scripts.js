@@ -6,11 +6,24 @@ https://templatemo.com/tm-603-nexaverse
 
 */
 
-// Loading Screen
+// Loading Screen y Activación de Grilla
 window.addEventListener('load', () => {
+   const loader = document.getElementById('loadingScreen');
+   
+   // Damos un pequeño respiro para que el navegador asiente el CSS
    setTimeout(() => {
-      document.getElementById('loadingScreen').classList.add('hidden');
-   }, 1000);
+      loader.classList.add('hidden');
+      
+      // FORZAMOS la aparición de la grilla y el texto
+      const menuItems = document.querySelectorAll('.menu-item');
+      menuItems.forEach((item, index) => {
+         setTimeout(() => {
+            item.style.opacity = '1';
+            item.style.transform = 'translateY(0) scale(1)';
+            item.classList.add('visible'); // Asegura que la clase de CSS se aplique
+         }, index * 100); // Aparecen uno tras otro suavemente
+      });
+   }, 500); 
 });
 
 // Menu Item Click Handler
