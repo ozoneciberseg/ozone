@@ -8,22 +8,12 @@ https://templatemo.com/tm-603-nexaverse
 
 // Loading Screen y Activación de Grilla
 window.addEventListener('load', () => {
-   const loader = document.getElementById('loadingScreen');
-   
-   // Damos un pequeño respiro para que el navegador asiente el CSS
+   // El loader se va, pero ya no intentamos mover la grilla por JS
+   // porque el CSS que pusimos arriba ya lo hizo de forma más estable
    setTimeout(() => {
-      loader.classList.add('hidden');
-      
-      // FORZAMOS la aparición de la grilla y el texto
-      const menuItems = document.querySelectorAll('.menu-item');
-      menuItems.forEach((item, index) => {
-         setTimeout(() => {
-            item.style.opacity = '1';
-            item.style.transform = 'translateY(0) scale(1)';
-            item.classList.add('visible'); // Asegura que la clase de CSS se aplique
-         }, index * 100); // Aparecen uno tras otro suavemente
-      });
-   }, 2000); 
+      const loader = document.getElementById('loadingScreen');
+      if(loader) loader.classList.add('hidden');
+   }, 500); 
 });
 
 // Menu Item Click Handler
