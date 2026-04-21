@@ -114,6 +114,10 @@ body {
 	background-size: 80px 80px;
 	pointer-events: none;
 	z-index: 1;
+	backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
 }
 
 /* Loading Screen */
@@ -246,6 +250,14 @@ body {
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
 	text-transform: uppercase;
+
+	/* Optimizaciones para asegurar el renderizado en Chrome */
+	display: block;
+	will-change: transform, opacity;
+	transform: translateZ(0);
+	-webkit-transform: translateZ(0);
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
 }
 
 .tagline {
