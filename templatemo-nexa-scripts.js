@@ -17,28 +17,38 @@ window.addEventListener('load', () => {
     setTimeout(() => {
         // 1. Ocultar loader
         if (loader) loader.classList.add('hidden');
-
+    
         // 2. Mostrar body
         document.body.classList.add('ready');
-
+    
+        /**
+         * MEJORA DE ESTABILIDAD:
+         * Forzar un "reflow" manual. Al acceder a offsetHeight, obligamos a Chrome 
+         * a calcular la geometría de la página y procesar los estilos complejos 
+         * (como el background-clip) antes de iniciar las transiciones.
+         */
+        void document.documentElement.offsetHeight;
+    
         // 3. Header
+        // Se aumenta a 150ms para dar margen a que el motor Blink de Chrome 
+        // termine de procesar las capas de composición (Composite Layers).
         setTimeout(() => {
             if (header) header.classList.add('visible');
-        }, 80);
-
-        // 4. Menu items escalonados (JS puro, sin keyframes CSS)
+        }, 150);
+    
+        // 4. Menu items escalonados
         items.forEach((item, i) => {
             setTimeout(() => {
                 item.classList.add('visible');
-            }, 200 + i * 100);
+            }, 300 + i * 100);
         });
-
+    
         // 5. Footer al final
         setTimeout(() => {
             if (footer) footer.classList.add('visible');
-        }, 200 + items.length * 100 + 100);
-
-    }, 350);
+        }, 300 + items.length * 100 + 150);
+    
+    }, 450); // Aumentado de 350ms a 450ms para garantizar que las fuentes externas estén listas
 });
 
 // Menu Item Click Handler
